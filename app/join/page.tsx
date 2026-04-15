@@ -16,6 +16,7 @@ const STEPS = [
     title: "New conversation",
     body: "Tap the plus icon.",
     image: "step_2.png",
+    imageOr: "step_2_or.png",
   },
   {
     title: "Paste invite and start",
@@ -85,14 +86,43 @@ export default function JoinPage() {
                     </p>
                   </div>
                 </div>
-                <div className="overflow-hidden rounded-md bg-[#141414]">
-                  {/* eslint-disable-next-line @next/next/no-img-element -- local screenshots; natural size */}
-                  <img
-                    src={`/${step.image}`}
-                    alt={`Step ${i + 1}: ${step.title}`}
-                    className="h-auto w-full"
-                  />
-                </div>
+                {"imageOr" in step && step.imageOr ? (
+                  <div className="flex min-w-0 flex-col gap-2">
+                    <div className="overflow-hidden rounded-md bg-[#141414]">
+                      {/* eslint-disable-next-line @next/next/no-img-element -- local screenshots; natural size */}
+                      <img
+                        src={`/${step.image}`}
+                        alt={`Step ${i + 1}: ${step.title}`}
+                        className="h-auto w-full"
+                      />
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <p className="text-center text-[11px] font-medium uppercase tracking-wide text-[#555]">
+                        or
+                      </p>
+                      <p className="text-left text-[12px] leading-relaxed text-[#888]">
+                        Click &quot;Start Direct Message&quot;
+                      </p>
+                    </div>
+                    <div className="overflow-hidden rounded-md bg-[#141414]">
+                      {/* eslint-disable-next-line @next/next/no-img-element -- local screenshots; natural size */}
+                      <img
+                        src={`/${step.imageOr}`}
+                        alt={`Step ${i + 1}: ${step.title} (alternate)`}
+                        className="h-auto w-full"
+                      />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="overflow-hidden rounded-md bg-[#141414]">
+                    {/* eslint-disable-next-line @next/next/no-img-element -- local screenshots; natural size */}
+                    <img
+                      src={`/${step.image}`}
+                      alt={`Step ${i + 1}: ${step.title}`}
+                      className="h-auto w-full"
+                    />
+                  </div>
+                )}
               </div>
             ))}
           </div>
