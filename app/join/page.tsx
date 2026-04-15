@@ -42,7 +42,7 @@ export default function JoinPage() {
               privllm
             </span>
             <p className="text-[13px] leading-relaxed text-[#888]">
-              Join this DM with the string below, then follow the steps.
+              Join this DM on haven with the string below, then follow the steps.
             </p>
           </div>
         </div>
