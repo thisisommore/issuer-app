@@ -129,10 +129,10 @@ export default function Home() {
     <div className="flex min-h-screen justify-center bg-[#0e0e0e] px-5 py-[60px] font-mono text-[#aaa]">
       <div className="flex w-full max-w-[400px] flex-col gap-6">
         <div className="flex flex-col items-start gap-2">
-          <span className="text-sm font-medium tracking-wide text-[#ddd]">haven</span>
+          <span className="text-sm font-medium tracking-wide text-[#ddd]">privllm</span>
           {account && (
             <span
-              className="w-full cursor-pointer break-all text-[11px] text-[#666] [overflow-wrap:anywhere]"
+              className="w-full cursor-pointer break-all text-[11px] text-[#666] wrap-anywhere"
               onClick={() => copy(account, "addr")}
             >
               {copiedAddr ? "✓" : account}
@@ -140,7 +140,7 @@ export default function Home() {
           )}
         </div>
 
-        <div className="flex flex-col gap-4 rounded-lg border border-[#222] px-6 py-7">
+        <div className="flex flex-col gap-4 rounded-lg py-4">
           {showConnect && (
             <>
               <p className="text-[13px] leading-relaxed text-[#888]">
@@ -183,13 +183,13 @@ export default function Home() {
                 <span className="size-1.5 shrink-0 rounded-full bg-[#6b6]" />
                 <span>Authenticated</span>
               </div>
-              <p className="rounded-md border border-[#432] bg-[#1a1510] px-3 py-2.5 text-xs leading-snug text-[#a85]">
+              <p className="rounded-md bg-[#1a1510] px-3 py-2.5 text-xs leading-snug text-[#a85]">
                 This credential expires {CREDENTIAL_VALID_MINUTES} minutes after it was
                 issued. Use it before then.
               </p>
               {doneError && <p className="text-xs text-[#c45]">{doneError}</p>}
-              <div className="flex flex-col gap-2.5 rounded-md border border-[#222] bg-[#141414] p-3">
-                <code className="block break-all text-[11px] leading-normal text-[#666] [overflow-wrap:anywhere]">
+              <div className="flex flex-col gap-2.5 rounded-md bg-[#141414] p-3">
+                <code className="block break-all text-[11px] leading-normal text-[#666] wrap-anywhere">
                   {signature}
                 </code>
                 <div className="flex flex-wrap justify-end gap-2">
@@ -205,7 +205,7 @@ export default function Home() {
                     type="button"
                     onClick={() => copy(signature, "token")}
                     disabled={regenerating}
-                    className="rounded border border-[#333] bg-transparent px-2.5 py-1 font-mono text-[11px] text-[#888] disabled:cursor-not-allowed disabled:opacity-50"
+                    className="rounded bg-transparent px-2.5 py-1 font-mono text-[#888] text-[11px] hover:bg-[#1a1a1a] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:bg-transparent"
                   >
                     {copied ? "✓" : "Copy"}
                   </button>
