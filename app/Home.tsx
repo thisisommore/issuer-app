@@ -29,7 +29,7 @@ export default function Home() {
       setError(undefined)
       const extensions = await web3Enable("Haven")
       if (extensions.length === 0) {
-        setError("No wallet extension found. Install the xx network or Polkadot extension.")
+        setError("No wallet extension found.")
         setState("error")
         return
       }
