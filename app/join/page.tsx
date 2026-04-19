@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useState } from "react"
 
 const HAVEN_DM_STRING =
-  "haven-dm:eyJjbCI6IiNGODgwMTciLCJjbiI6InRoZWlyT3JpZW50aW5nU3VydGF4IiwiY3MiOjAsInAiOiJ4N0YzT1IyTSt4a2M5YnBkR1JMUEVwUFd2UjdYVHNDNEJIQ2xvcEc3Z3dnPSIsInQiOjM4MzI4NjkxMTh9"
+  "haven-dm:eyJjbCI6IiNGRkYzODAiLCJjbiI6InRoZUFzdGVyaWF0ZWRQcm9mdW5kaXR5IiwiY3MiOjAsInAiOiJoc0JCbnRSZFFnTUV4ejVtdml3REtpV2FrN0E2RnVpaXdNVEo5Zjd2akw0PSIsInQiOjI5Mjk2MzM2MDV9"
 const STEPS = [
   {
     title: "Open chat",
